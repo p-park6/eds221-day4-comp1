@@ -150,11 +150,35 @@ df_means <- function(df) {
 ```
 
 ```{r}
-df_means(df = faithful)
+df_means(df = penguins)
 ```
 
+### Create a function to calculate the Betz Limit:
 
+### Air density: kg/m^3
 
+### Power: watts
+```{r}
+calculate_betz_windpower <- function(air_density, 
+                                     rotor_radius, 
+                                     wind_velocity) {
+  if(wind_velocity > 130) {
+    warning("hey! take a look cause thats pretty fast")
+  }
+  if(rotor_radius < 0) {
+    stop("Rotor Radius must be a positive value in meters.")
+  }
+  0.3 * air_density * pi  * ((rotor_radius) ^ 2) * (wind_velocity ^ 3)
+}
+```
+
+```{r}
+calculate_betz_windpower(air_density = 1.2, rotor_radius =  30, wind_velocity = 50)
+```
+
+```{r}
+calculate_betz_windpower(air_density = 1.2, rotor_radius =  15, wind_velocity = 150)
+```
 
 
 
