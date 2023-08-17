@@ -99,8 +99,16 @@ convert_kelvin(scale = "metric", temp_k = 50)
 ### Write a function that, given money, if a user selects "USA" to the scale then return dollars, or if they select "England" then return pounds.
 
 ```{r}
-convert_money <- (money, amount)
-if()
+convert_money <- function(money, amount)
+if(money == "USA") {
+  usa_money <- amount * 2
+  print(usa_money)
+} else if (money == "England") {
+  england_money <- amount * 2.5
+  print(england_money)
+}
+
+convert_money("USA", 34)
 ```
 
 
