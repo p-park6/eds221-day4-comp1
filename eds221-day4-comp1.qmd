@@ -95,3 +95,15 @@ convert_kelvin <- function(scale, temp_k) {
 
 convert_kelvin(scale = "metric", temp_k = 50)
 ```
+
+### Write a function that, given money, if a user selects "USA" to the scale then return dollars, or if they select "England" then return pounds.
+
+```{r}
+convert_money <- (money, amount)
+if()
+```
+
+
+
+
+
