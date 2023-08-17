@@ -1,0 +1,72 @@
+---
+title: "eds221-day4-comp1"
+format: html
+editor: visual
+execute: 
+  warning: false
+---
+
+## Functions
+
+### Make a function that doubles a value.
+
+```{r}
+double_value <- function(my_dollars) {
+  print(2 * my_dollars)
+  #can also code as 2 * my_dollars (do not need the print statement) but this is storing it as well
+}
+```
+
+```{r}
+double_value(10.13)
+```
+
+```{r}
+double_value(my_dollars = 10.13, 5)
+
+monthly_income <- c(13, 15, 16, 18)
+```
+
+### Create a function that returns an awesome restaurant name given a cool animal and your favorite food
+```{r}
+name_restaurant <- function(animal, food) {
+  print(paste0(animal, food))
+}
+
+name_restaurant(animal = "hawk", food = "pizza")
+```
+
+Given temperature in degrees fahrenheit, write a function that converts it to Celsius
+
+
+```{r}
+convert_F_to_C <- function(fahrenheit) {
+  x <- ((fahrenheit - 32) * (5/9))
+  print(x)
+}
+
+convert_F_to_C(52)
+```
+
+### Create a function that given inputs of age and hometown, returns "I am __ years old and I'm from __"
+
+```{r}
+age_hometowm <- function(age_yr, hometown) {
+  y <- paste("I am", age, "years old and I'm from", hometown)
+  print(y)
+}
+
+age_hometowm(33, "Miami")
+```
+
+## print statement: show me this
+## return statement: store and save so i can use later
+
+
+
+
+
+
+
+
+
